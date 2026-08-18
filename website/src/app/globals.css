@@ -1,0 +1,130 @@
+@import "tailwindcss";
+
+@theme inline {
+  /* Stitch design tokens */
+  --color-primary: #b7c4ff;
+  --color-on-primary: #102974;
+  --color-primary-container: #001e6a;
+  --color-on-primary-container: #7589d8;
+  --color-secondary: #b7c4ff;
+  --color-secondary-container: #0050f8;
+  --color-on-secondary-container: #dadfff;
+  --color-tertiary: #ffb5a1;
+  --color-background: #121318;
+  --color-on-background: #e3e1e9;
+  --color-surface: #121318;
+  --color-on-surface: #e3e1e9;
+  --color-on-surface-variant: #c5c5d3;
+  --color-surface-container: #1f1f24;
+  --color-surface-container-low: #1a1b20;
+  --color-surface-container-lowest: #0d0e13;
+  --color-surface-container-high: #292a2f;
+  --color-surface-container-highest: #34343a;
+  --color-surface-variant: #34343a;
+  --color-outline: #8f909c;
+  --color-outline-variant: #444651;
+  --color-action: #1557ff;
+  --color-action-hover: #3d7cff;
+  --color-action-text: #f5f7fa;
+  --color-card-bg: #08142a;
+  --color-card-border: #0d1b32;
+  --color-base-dark: #030712;
+
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-brand: var(--font-brand), ui-sans-serif, system-ui, sans-serif;
+
+  --spacing-margin-mobile: 20px;
+  --spacing-margin-desktop: 64px;
+  --spacing-gutter: 32px;
+  --spacing-unit-xs: 4px;
+  --spacing-unit-sm: 8px;
+  --spacing-unit-md: 16px;
+  --spacing-unit-lg: 24px;
+  --spacing-unit-xl: 48px;
+  --spacing-unit-xxl: 96px;
+  --spacing-container-max: 1280px;
+
+  --radius-sm: 0.125rem;
+  --radius-DEFAULT: 0.25rem;
+  --radius-lg: 0.5rem;
+  --radius-xl: 0.75rem;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-base-dark);
+  color: var(--color-on-background);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.font-brand {
+  font-family: var(--font-brand), ui-sans-serif, system-ui, sans-serif;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+.grid-bg {
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+  background-size: 64px 64px;
+}
+
+.blueprint-grid {
+  background-image:
+    linear-gradient(to right, rgba(16, 31, 58, 0.2) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(16, 31, 58, 0.2) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+.radial-overlay {
+  background: radial-gradient(
+    circle at center,
+    rgba(21, 87, 255, 0.05) 0%,
+    transparent 70%
+  );
+}
+
+.animated-underline {
+  position: relative;
+}
+
+.animated-underline::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: var(--color-primary);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.animated-underline:hover::after {
+  transform: scaleX(1);
+}
+
+/* Custom cursor hide default on desktop when enabled */
+body.custom-cursor-active,
+body.custom-cursor-active * {
+  cursor: none !important;
+}

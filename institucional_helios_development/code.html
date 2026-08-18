@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Helios Development - Institucional</title>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-fixed": "#ffdbd1",
+                        "on-tertiary-fixed-variant": "#7b2e19",
+                        "on-tertiary-fixed": "#3c0800",
+                        "on-error": "#690005",
+                        "primary": "#b7c4ff",
+                        "outline-variant": "#444651",
+                        "on-primary-fixed": "#001551",
+                        "background": "#121318",
+                        "primary-fixed": "#dce1ff",
+                        "on-tertiary": "#5d1805",
+                        "secondary-fixed": "#dce1ff",
+                        "surface-container-highest": "#34343a",
+                        "tertiary-fixed-dim": "#ffb5a1",
+                        "secondary-fixed-dim": "#b7c4ff",
+                        "surface-tint": "#b7c4ff",
+                        "surface": "#121318",
+                        "on-secondary-fixed": "#001552",
+                        "tertiary-container": "#4f0e00",
+                        "tertiary": "#ffb5a1",
+                        "surface-container": "#1f1f24",
+                        "secondary-container": "#0050f8",
+                        "inverse-surface": "#e3e1e9",
+                        "surface-bright": "#38393e",
+                        "on-secondary": "#002682",
+                        "on-error-container": "#ffdad6",
+                        "secondary": "#b7c4ff",
+                        "surface-dim": "#121318",
+                        "on-secondary-fixed-variant": "#0038b6",
+                        "on-primary-fixed-variant": "#2c418b",
+                        "error": "#ffb4ab",
+                        "error-container": "#93000a",
+                        "surface-container-lowest": "#0d0e13",
+                        "inverse-on-surface": "#2f3035",
+                        "outline": "#8f909c",
+                        "on-surface": "#e3e1e9",
+                        "primary-fixed-dim": "#b7c4ff",
+                        "on-primary": "#102974",
+                        "on-secondary-container": "#dadfff",
+                        "surface-container-low": "#1a1b20",
+                        "on-background": "#e3e1e9",
+                        "on-surface-variant": "#c5c5d3",
+                        "surface-container-high": "#292a2f",
+                        "primary-container": "#001e6a",
+                        "surface-variant": "#34343a",
+                        "inverse-primary": "#455aa5",
+                        "on-tertiary-container": "#d57258",
+                        "on-primary-container": "#7589d8"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-mobile": "20px",
+                        "unit-sm": "8px",
+                        "unit-xxl": "96px",
+                        "margin-desktop": "64px",
+                        "unit-xs": "4px",
+                        "unit-lg": "24px",
+                        "unit-xl": "48px",
+                        "unit-md": "16px",
+                        "container-max": "1280px",
+                        "gutter": "32px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Inter"],
+                        "display-lg-mobile": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "headline-xl": ["Inter"],
+                        "caption": ["Inter"],
+                        "label-md": ["Inter"],
+                        "display-lg": ["Inter"],
+                        "body-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "display-lg-mobile": ["40px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "headline-lg": ["28px", { "lineHeight": "1.3", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "headline-xl": ["36px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "caption": ["12px", { "lineHeight": "1.4", "fontWeight": "400" }],
+                        "label-md": ["14px", { "lineHeight": "1.0", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "display-lg": ["64px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+</head>
+<body class="bg-background text-on-background min-h-screen flex flex-col font-body-md overflow-x-hidden relative">
+<!-- Subtle Global Radial Gradient -->
+<div class="fixed inset-0 pointer-events-none z-0" style="background: radial-gradient(circle at top right, rgba(0, 30, 106, 0.15) 0%, transparent 60%);"></div>
+<!-- TopNavBar -->
+<nav class="bg-background border-b border-outline-variant w-full z-50 sticky top-0">
+<div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto h-[96px]">
+<!-- Brand Logo -->
+<div class="font-headline-xl text-headline-xl font-bold text-on-background tracking-tight">
+                Helios Development
+            </div>
+<!-- Navigation Links -->
+<div class="hidden md:flex items-center gap-unit-xl">
+<a class="font-label-md text-label-md text-primary border-b-2 border-primary pb-1 scale-95 transition-all duration-200" href="#">Institucional</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary hover:bg-surface-container-low px-unit-sm py-unit-xs rounded transition-all duration-200" href="#">Soluções</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary hover:bg-surface-container-low px-unit-sm py-unit-xs rounded transition-all duration-200" href="#">Tecnologia</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary hover:bg-surface-container-low px-unit-sm py-unit-xs rounded transition-all duration-200" href="#">Sustentabilidade</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary hover:bg-surface-container-low px-unit-sm py-unit-xs rounded transition-all duration-200" href="#">Projetos</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary hover:bg-surface-container-low px-unit-sm py-unit-xs rounded transition-all duration-200" href="#">Conteúdos</a>
+</div>
+<!-- Trailing Action -->
+<button class="hidden md:flex font-label-md text-label-md bg-[#1557FF] text-[#F5F7FA] px-unit-lg py-unit-md rounded hover:bg-opacity-90 transition-all duration-200 items-center justify-center">
+                Contato
+            </button>
+<!-- Mobile Menu Icon -->
+<button class="md:hidden text-on-surface-variant">
+<span class="material-symbols-outlined" style="font-size: 32px;">menu</span>
+</button>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="flex-grow z-10 relative">
+<!-- Hero Section -->
+<section class="w-full px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto pt-unit-xxl pb-unit-xl md:py-[160px]">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<div class="md:col-span-10">
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-on-background mb-unit-lg md:mb-unit-xl">
+                        Quem somos
+                    </h1>
+<p class="font-headline-lg text-headline-lg text-on-surface-variant max-w-[800px]">
+                        Tecnologia, estratégia e desenvolvimento para construir soluções que evoluem com nossos clientes.
+                    </p>
+</div>
+</div>
+</section>
+<!-- Vision, Mission, Values Section -->
+<section class="w-full px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto py-unit-xxl border-t border-outline-variant">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Intro Column -->
+<div class="md:col-span-4 flex flex-col gap-unit-xl">
+<div>
+<h2 class="font-label-md text-label-md text-primary uppercase mb-unit-sm">Missão</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+                            Fornecer infraestrutura tecnológica inabalável e estratégias escaláveis que garantam a perpetuidade e o crescimento institucional de nossos parceiros.
+                        </p>
+</div>
+<div>
+<h2 class="font-label-md text-label-md text-primary uppercase mb-unit-sm">Visão</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+                            Ser o pilar fundamental da transformação digital no setor corporativo, reconhecidos pela precisão, segurança e visão de longo prazo.
+                        </p>
+</div>
+</div>
+<!-- Values Grid (Bento Style) -->
+<div class="md:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-unit-md">
+<!-- Value 1 -->
+<div class="bg-surface-container-low border border-outline-variant p-unit-lg flex flex-col gap-unit-md h-[240px] hover:bg-surface-container transition-colors duration-300">
+<span class="material-symbols-outlined text-primary" style="font-size: 32px;">workspace_premium</span>
+<h3 class="font-headline-lg text-headline-lg text-on-surface">Excelência</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-auto">Rigor técnico e precisão metodológica em cada linha de código e decisão arquitetural.</p>
+</div>
+<!-- Value 2 -->
+<div class="bg-surface-container-low border border-outline-variant p-unit-lg flex flex-col gap-unit-md h-[240px] hover:bg-surface-container transition-colors duration-300">
+<span class="material-symbols-outlined text-primary" style="font-size: 32px;">lightbulb</span>
+<h3 class="font-headline-lg text-headline-lg text-on-surface">Inovação</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-auto">Adoção controlada e estratégica de novas tecnologias para garantir vantagem competitiva sustentável.</p>
+</div>
+<!-- Value 3 -->
+<div class="bg-surface-container-low border border-outline-variant p-unit-lg flex flex-col gap-unit-md h-[240px] hover:bg-surface-container transition-colors duration-300">
+<span class="material-symbols-outlined text-primary" style="font-size: 32px;">visibility</span>
+<h3 class="font-headline-lg text-headline-lg text-on-surface">Transparência</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-auto">Visibilidade total sobre processos, riscos e métricas de desempenho corporativo.</p>
+</div>
+<!-- Value 4 -->
+<div class="bg-surface-container-low border border-outline-variant p-unit-lg flex flex-col gap-unit-md h-[240px] hover:bg-surface-container transition-colors duration-300">
+<span class="material-symbols-outlined text-primary" style="font-size: 32px;">trending_up</span>
+<h3 class="font-headline-lg text-headline-lg text-on-surface">Evolução</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-auto">Sistemas projetados para crescer e se adaptar dinamicamente às demandas futuras do mercado.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Methodology Section -->
+<section class="w-full px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto py-unit-xxl border-t border-outline-variant">
+<h2 class="font-headline-xl text-headline-xl text-on-background mb-unit-xl md:w-2/3">Nossa forma de trabalhar</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<div class="flex flex-col gap-unit-md border-t-2 border-outline-variant pt-unit-md">
+<span class="font-label-md text-label-md text-primary">01</span>
+<h3 class="font-headline-lg text-headline-lg text-on-surface">Análise Profunda</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Mergulhamos no core do seu negócio para entender desafios complexos antes de propor qualquer arquitetura tecnológica.</p>
+</div>
+<div class="flex flex-col gap-unit-md border-t-2 border-outline-variant pt-unit-md">
+<span class="font-label-md text-label-md text-primary">02</span>
+<h3 class="font-headline-lg text-headline-lg text-on-surface">Engenharia Estratégica</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Desenvolvemos blueprints escaláveis e seguros, priorizando a estabilidade de longo prazo sobre modismos passageiros.</p>
+</div>
+<div class="flex flex-col gap-unit-md border-t-2 border-outline-variant pt-unit-md">
+<span class="font-label-md text-label-md text-primary">03</span>
+<h3 class="font-headline-lg text-headline-lg text-on-surface">Execução Iterativa</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Entregas contínuas e validadas, garantindo que o desenvolvimento se alinhe perfeitamente às mudanças de cenário do mercado.</p>
+</div>
+</div>
+</section>
+<!-- Pillars Section -->
+<section class="w-full px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto py-unit-xxl border-t border-outline-variant">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<!-- Pillar: Tecnologia -->
+<div class="flex flex-col">
+<div class="bg-cover bg-center w-full h-[400px] mb-unit-lg bg-surface-container-low border border-outline-variant" data-alt="A high-contrast, abstract visualization of digital architecture and data streams in a dark, institutional setting. Clean, precise lines of blue and white light intersect against a deep navy background, representing technological rigor and strategic development. The mood is stoic, professional, and forward-looking, perfectly aligned with a minimalist corporate aesthetic. Subtle geometric shapes float in the background, adding depth without clutter." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDUJytE8HZwpqqC7hRGrnMrooslwh8HnY_TCH0DS-d9EysMaNpqP1VHmdvhKH1YIZhcC6j0MjNwnAFuFpsTrbGXts7VPH-RLCQdwIVPhjf3-X4g196ww_U1Wbt2Fwc37B652rmDJgK3qMbPorzJ11zI80dQJuxbcnn2ftK8PgIXQkG5rKR-tpyeHMTJS5kv3ZT-thBtoJ5q_qB_M-kSgdLGg93s2Y_8fX0niShsACyxNJT7IoScjITMxg')"></div>
+<h2 class="font-headline-xl text-headline-xl text-on-background mb-unit-md">Tecnologia</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+                        Nossa infraestrutura é construída sobre fundações sólidas, utilizando as tecnologias mais robustas e confiáveis do mercado. Não buscamos a novidade pela novidade, mas sim a ferramenta exata que garantirá a máxima eficiência, segurança e escalabilidade para operações de missão crítica.
+                    </p>
+</div>
+<!-- Pillar: Pessoas -->
+<div class="flex flex-col md:mt-unit-xxl">
+<div class="bg-cover bg-center w-full h-[400px] mb-unit-lg bg-surface-container-low border border-outline-variant" data-alt="A sophisticated, low-key lighting portrait of diverse professionals in a modern, minimalist glass-and-steel corporate environment. The scene is shot with a cool color palette, dominated by deep blacks, dark blues, and pristine whites, conveying institutional authority and steady confidence. The focus is on collaboration and deep-domain expertise, avoiding trendy startup tropes. The composition is highly structured and geometric, reflecting a permanent, reliable corporate identity." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAdrwm9Rq1t95gt--WkB-PgqgrbDMBYUImoItB9AkwhfbTDtKEzboGBqh1C3pQUV9jH1okPdOkVkmYFO33bO4hu9hTqofp0bRODc3tjDqmXTDy-1R96-L_1vMeFXufrHDCNhgtacgMNz9J8fiGu0woM7cMf5BAtWSb40OxoO1D8V2gRbD-JOAebEEjgUSdcamHGiwu0IWXPnI3JVwkGvNMfTm6O8PJXJIKv_Gipdtb4jmNMOVm1V3iIJw')"></div>
+<h2 class="font-headline-xl text-headline-xl text-on-background mb-unit-md">Pessoas</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+                        O verdadeiro motor por trás de cada linha de código. Reunimos especialistas sêniores com profunda expertise de domínio, capazes de traduzir complexidade de negócios em soluções elegantes. Valorizamos a estabilidade intelectual e a capacidade de resolução de problemas complexos.
+                    </p>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest border-t border-outline-variant w-full mt-auto">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter w-full px-margin-mobile md:px-margin-desktop py-unit-xxl max-w-container-max mx-auto">
+<!-- Brand & Copyright -->
+<div class="md:col-span-4 flex flex-col justify-between h-full min-h-[160px]">
+<div class="font-headline-lg text-headline-lg font-bold text-on-surface tracking-tight">
+                    Helios Development
+                </div>
+<div class="font-body-md text-body-md text-on-surface-variant mt-auto">
+                    © 2024 Helios Development. Todos os direitos reservados.
+                </div>
+</div>
+<!-- Links Grid -->
+<div class="md:col-span-8 flex flex-wrap gap-unit-xl md:justify-end">
+<div class="flex flex-col gap-unit-md">
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Institucional</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Soluções</a>
+</div>
+<div class="flex flex-col gap-unit-md">
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Tecnologia</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Social</a>
+</div>
+<div class="flex flex-col gap-unit-md">
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Privacidade</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Termos</a>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

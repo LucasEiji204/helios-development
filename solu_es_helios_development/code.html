@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Soluções - Helios Development</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-fixed": "#ffdbd1",
+                        "on-tertiary-fixed-variant": "#7b2e19",
+                        "on-tertiary-fixed": "#3c0800",
+                        "on-error": "#690005",
+                        "primary": "#b7c4ff",
+                        "outline-variant": "#444651",
+                        "on-primary-fixed": "#001551",
+                        "background": "#121318",
+                        "primary-fixed": "#dce1ff",
+                        "on-tertiary": "#5d1805",
+                        "secondary-fixed": "#dce1ff",
+                        "surface-container-highest": "#34343a",
+                        "tertiary-fixed-dim": "#ffb5a1",
+                        "secondary-fixed-dim": "#b7c4ff",
+                        "surface-tint": "#b7c4ff",
+                        "surface": "#121318",
+                        "on-secondary-fixed": "#001552",
+                        "tertiary-container": "#4f0e00",
+                        "tertiary": "#ffb5a1",
+                        "surface-container": "#1f1f24",
+                        "secondary-container": "#0050f8",
+                        "inverse-surface": "#e3e1e9",
+                        "surface-bright": "#38393e",
+                        "on-secondary": "#002682",
+                        "on-error-container": "#ffdad6",
+                        "secondary": "#b7c4ff",
+                        "surface-dim": "#121318",
+                        "on-secondary-fixed-variant": "#0038b6",
+                        "on-primary-fixed-variant": "#2c418b",
+                        "error": "#ffb4ab",
+                        "error-container": "#93000a",
+                        "surface-container-lowest": "#0d0e13",
+                        "inverse-on-surface": "#2f3035",
+                        "outline": "#8f909c",
+                        "on-surface": "#e3e1e9",
+                        "primary-fixed-dim": "#b7c4ff",
+                        "on-primary": "#102974",
+                        "on-secondary-container": "#dadfff",
+                        "surface-container-low": "#1a1b20",
+                        "on-background": "#e3e1e9",
+                        "on-surface-variant": "#c5c5d3",
+                        "surface-container-high": "#292a2f",
+                        "primary-container": "#001e6a",
+                        "surface-variant": "#34343a",
+                        "inverse-primary": "#455aa5",
+                        "on-tertiary-container": "#d57258",
+                        "on-primary-container": "#7589d8"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-mobile": "20px",
+                        "unit-sm": "8px",
+                        "unit-xxl": "96px",
+                        "margin-desktop": "64px",
+                        "unit-xs": "4px",
+                        "unit-lg": "24px",
+                        "unit-xl": "48px",
+                        "unit-md": "16px",
+                        "container-max": "1280px",
+                        "gutter": "32px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Inter"],
+                        "display-lg-mobile": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "headline-xl": ["Inter"],
+                        "caption": ["Inter"],
+                        "label-md": ["Inter"],
+                        "display-lg": ["Inter"],
+                        "body-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "display-lg-mobile": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "headline-lg": ["28px", {"lineHeight": "1.3", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "headline-xl": ["36px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "caption": ["12px", {"lineHeight": "1.4", "fontWeight": "400"}],
+                        "label-md": ["14px", {"lineHeight": "1.0", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .blueprint-grid {
+            background-image: 
+                linear-gradient(to right, rgba(16, 31, 58, 0.2) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(16, 31, 58, 0.2) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col relative blueprint-grid">
+<!-- Geometric Overlay -->
+<div class="fixed inset-0 pointer-events-none z-0 overflow-hidden">
+<div class="absolute -top-[50%] -left-[20%] w-[100%] h-[100%] rounded-full bg-primary/5 blur-[120px]"></div>
+<div class="absolute top-[30%] -right-[30%] w-[80%] h-[80%] rounded-full bg-secondary-container/5 blur-[100px]"></div>
+</div>
+<!-- TopNavBar -->
+<nav class="bg-background dark:bg-background border-b border-outline-variant dark:border-outline-variant w-full sticky top-0 z-50 transition-all duration-300">
+<div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto h-unit-xxl">
+<!-- Brand -->
+<a class="font-headline-xl text-headline-xl font-bold text-on-background dark:text-on-background tracking-tight hover:opacity-80 transition-opacity" href="/">
+                Helios Development
+            </a>
+<!-- Navigation Links (Web) -->
+<ul class="hidden md:flex items-center gap-unit-lg h-full">
+<li class="h-full flex items-center">
+<a class="font-label-md text-label-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors duration-200 py-2" href="#">Institucional</a>
+</li>
+<li class="h-full flex items-center">
+<a class="font-label-md text-label-md text-primary dark:text-primary border-b-2 border-primary pb-1 h-full flex items-center scale-95 duration-200 ease-in-out" href="#">Soluções</a>
+</li>
+<li class="h-full flex items-center">
+<a class="font-label-md text-label-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors duration-200 py-2" href="#">Tecnologia</a>
+</li>
+<li class="h-full flex items-center">
+<a class="font-label-md text-label-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors duration-200 py-2" href="#">Sustentabilidade</a>
+</li>
+<li class="h-full flex items-center">
+<a class="font-label-md text-label-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors duration-200 py-2" href="#">Projetos</a>
+</li>
+<li class="h-full flex items-center">
+<a class="font-label-md text-label-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors duration-200 py-2" href="#">Conteúdos</a>
+</li>
+</ul>
+<!-- Trailing Action -->
+<div class="flex items-center gap-unit-md">
+<button class="bg-[#1557FF] text-[#F5F7FA] font-label-md text-label-md px-6 py-3 rounded hover:bg-opacity-90 transition-all duration-200 hidden md:block">
+                    Contato
+                </button>
+<!-- Mobile Menu Toggle -->
+<button aria-label="Menu" class="md:hidden text-on-background">
+<span class="material-symbols-outlined" style="font-size: 28px;">menu</span>
+</button>
+</div>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="flex-grow relative z-10 w-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-unit-xl md:py-unit-xxl flex flex-col gap-unit-xxl">
+<!-- Hero Section -->
+<header class="max-w-3xl">
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-on-background mb-unit-md relative inline-block">
+                Produtos e serviços
+                <div class="absolute -bottom-2 left-0 w-1/3 h-[1px] bg-primary scale-x-0 origin-left animate-[scaleIn_1s_ease-out_forwards]"></div>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+                Soluções tecnológicas desenvolvidas para diferentes necessidades e desafios. Combinamos engenharia robusta com design focado no usuário para entregar infraestrutura digital de alto impacto.
+            </p>
+</header>
+<!-- Solutions Grid -->
+<section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Software Card -->
+<article class="bg-[#08142A] border border-[#0D1B32] rounded-lg p-unit-lg flex flex-col h-full group hover:bg-[#0A1A35] transition-colors duration-300 relative overflow-hidden">
+<div class="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-[#1557FF] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+<div class="mb-unit-md bg-surface-container w-12 h-12 rounded flex items-center justify-center border border-outline-variant">
+<span class="material-symbols-outlined text-primary" data-icon="terminal">terminal</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg text-on-background mb-unit-sm">Software</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-unit-lg flex-grow">
+                    Desenvolvimento de sistemas customizados e web apps escaláveis. Construímos arquiteturas resilientes desenhadas para alta disponibilidade e performance em ambientes institucionais críticos.
+                </p>
+<ul class="flex flex-col gap-unit-sm mb-unit-xl">
+<li class="flex items-center gap-unit-sm text-on-surface-variant font-label-md text-label-md">
+<span class="material-symbols-outlined text-[#3D7CFF] text-[16px]">check</span>
+                        Sistemas Customizados
+                    </li>
+<li class="flex items-center gap-unit-sm text-on-surface-variant font-label-md text-label-md">
+<span class="material-symbols-outlined text-[#3D7CFF] text-[16px]">check</span>
+                        Web Apps Escaláveis
+                    </li>
+<li class="flex items-center gap-unit-sm text-on-surface-variant font-label-md text-label-md">
+<span class="material-symbols-outlined text-[#3D7CFF] text-[16px]">check</span>
+                        Integração de APIs
+                    </li>
+</ul>
+<a class="inline-flex items-center gap-2 font-label-md text-label-md text-primary hover:text-secondary transition-colors mt-auto group-hover:gap-3 duration-300" href="#">
+                    Saber mais <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</article>
+<!-- Digital Products Card -->
+<article class="bg-[#08142A] border border-[#0D1B32] rounded-lg p-unit-lg flex flex-col h-full group hover:bg-[#0A1A35] transition-colors duration-300 relative overflow-hidden">
+<div class="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-[#1557FF] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+<div class="mb-unit-md bg-surface-container w-12 h-12 rounded flex items-center justify-center border border-outline-variant">
+<span class="material-symbols-outlined text-primary" data-icon="design_services">design_services</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg text-on-background mb-unit-sm">Digital Products</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-unit-lg flex-grow">
+                    Do discovery ao protótipo de alta fidelidade. Metodologias estruturadas de UX/UI para traduzir requisitos complexos em interfaces eficientes, duradouras e centradas no usuário.
+                </p>
+<ul class="flex flex-col gap-unit-sm mb-unit-xl">
+<li class="flex items-center gap-unit-sm text-on-surface-variant font-label-md text-label-md">
+<span class="material-symbols-outlined text-[#3D7CFF] text-[16px]">check</span>
+                        Product Discovery
+                    </li>
+<li class="flex items-center gap-unit-sm text-on-surface-variant font-label-md text-label-md">
+<span class="material-symbols-outlined text-[#3D7CFF] text-[16px]">check</span>
+                        UX/UI Design
+                    </li>
+<li class="flex items-center gap-unit-sm text-on-surface-variant font-label-md text-label-md">
+<span class="material-symbols-outlined text-[#3D7CFF] text-[16px]">check</span>
+                        Prototipação Rápida
+                    </li>
+</ul>
+<a class="inline-flex items-center gap-2 font-label-md text-label-md text-primary hover:text-secondary transition-colors mt-auto group-hover:gap-3 duration-300" href="#">
+                    Saber mais <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</article>
+<!-- Tech Consulting Card -->
+<article class="bg-[#08142A] border border-[#0D1B32] rounded-lg p-unit-lg flex flex-col h-full group hover:bg-[#0A1A35] transition-colors duration-300 relative overflow-hidden">
+<div class="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-[#1557FF] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+<div class="mb-unit-md bg-surface-container w-12 h-12 rounded flex items-center justify-center border border-outline-variant">
+<span class="material-symbols-outlined text-primary" data-icon="architecture">architecture</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg text-on-background mb-unit-sm">Tech Consulting</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-unit-lg flex-grow">
+                    Consultoria estratégica para modernização de infraestrutura. Desenhamos arquiteturas corporativas e orientamos jornadas de transformação digital com foco em segurança e governança.
+                </p>
+<ul class="flex flex-col gap-unit-sm mb-unit-xl">
+<li class="flex items-center gap-unit-sm text-on-surface-variant font-label-md text-label-md">
+<span class="material-symbols-outlined text-[#3D7CFF] text-[16px]">check</span>
+                        Arquitetura de Sistemas
+                    </li>
+<li class="flex items-center gap-unit-sm text-on-surface-variant font-label-md text-label-md">
+<span class="material-symbols-outlined text-[#3D7CFF] text-[16px]">check</span>
+                        Transformação Digital
+                    </li>
+<li class="flex items-center gap-unit-sm text-on-surface-variant font-label-md text-label-md">
+<span class="material-symbols-outlined text-[#3D7CFF] text-[16px]">check</span>
+                        Auditoria de Código
+                    </li>
+</ul>
+<a class="inline-flex items-center gap-2 font-label-md text-label-md text-primary hover:text-secondary transition-colors mt-auto group-hover:gap-3 duration-300" href="#">
+                    Saber mais <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</article>
+</section>
+<!-- Image Banner -->
+<section class="mt-unit-xl w-full">
+<div class="relative w-full h-64 md:h-96 rounded-lg overflow-hidden border border-[#0D1B32]">
+<img class="w-full h-full object-cover opacity-60" data-alt="A highly detailed, ultra-wide view of a sleek, modern server room or data center illuminated by cool blue and crisp white LED lighting. The environment exudes technological precision, stability, and institutional authority. Perfect rigid symmetry is visible in the server racks, reinforcing a corporate, minimalist, and permanent aesthetic. Deep navy backgrounds contrast with bright structural lines." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSHykNQgm5eNHZPRHp4NkapnO9c_xPGLbzPdyJC2g56I74i-9-4Vr1arayjpVbWplI9X9P-1C6DMuhvvHMfE6g7U0FGcOWT2eOBVJ3rtjB0bIbNOitNQg2XqNHLJ0lr0CObXacBtzgFdeUOd1WVMsXc-6ViskePx6e7lZMPbmeRPG8utlUWt0rO5PQLY5ShC4W-ckTZkddVVbl_jMf7dWGLbzNBoTqEi1-34qEqM2zZIGEkcCyYcum8Q"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#030712] to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-unit-lg md:p-unit-xl max-w-2xl">
+<h2 class="font-headline-xl text-headline-xl text-on-background mb-unit-sm">Infraestrutura como pilar.</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Tecnologia desenvolvida com a precisão e a durabilidade necessárias para sustentar as operações de amanhã.</p>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest dark:bg-surface-container-lowest border-t border-outline-variant dark:border-outline-variant mt-auto w-full z-10 relative">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter w-full px-margin-mobile md:px-margin-desktop py-unit-xl md:py-unit-xxl max-w-container-max mx-auto">
+<!-- Brand & Copyright -->
+<div class="col-span-1 md:col-span-4 flex flex-col gap-unit-md">
+<span class="font-headline-lg text-headline-lg font-bold text-on-surface dark:text-on-surface">Helios Development</span>
+<p class="font-body-md text-body-md text-on-surface-variant dark:text-on-surface-variant">
+                    © 2024 Helios Development. Todos os direitos reservados.
+                </p>
+</div>
+<!-- Links -->
+<div class="col-span-1 md:col-span-8 flex flex-wrap gap-x-unit-xl gap-y-unit-md justify-start md:justify-end items-start mt-unit-lg md:mt-0">
+<a class="font-label-md text-label-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Institucional</a>
+<a class="font-label-md text-label-md text-primary dark:text-primary" href="#">Soluções</a>
+<a class="font-label-md text-label-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Tecnologia</a>
+<a class="font-label-md text-label-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Social</a>
+<a class="font-label-md text-label-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Privacidade</a>
+<a class="font-label-md text-label-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Termos</a>
+</div>
+</div>
+</footer>
+<style>
+        @keyframes scaleIn {
+            from { transform: scaleX(0); }
+            to { transform: scaleX(1); }
+        }
+    </style>
+</body></html>

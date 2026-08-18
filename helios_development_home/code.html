@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Helios Development</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-fixed": "#ffdbd1",
+                        "on-tertiary-fixed-variant": "#7b2e19",
+                        "on-tertiary-fixed": "#3c0800",
+                        "on-error": "#690005",
+                        "primary": "#b7c4ff",
+                        "outline-variant": "#444651",
+                        "on-primary-fixed": "#001551",
+                        "background": "#121318",
+                        "primary-fixed": "#dce1ff",
+                        "on-tertiary": "#5d1805",
+                        "secondary-fixed": "#dce1ff",
+                        "surface-container-highest": "#34343a",
+                        "tertiary-fixed-dim": "#ffb5a1",
+                        "secondary-fixed-dim": "#b7c4ff",
+                        "surface-tint": "#b7c4ff",
+                        "surface": "#121318",
+                        "on-secondary-fixed": "#001552",
+                        "tertiary-container": "#4f0e00",
+                        "tertiary": "#ffb5a1",
+                        "surface-container": "#1f1f24",
+                        "secondary-container": "#0050f8",
+                        "inverse-surface": "#e3e1e9",
+                        "surface-bright": "#38393e",
+                        "on-secondary": "#002682",
+                        "on-error-container": "#ffdad6",
+                        "secondary": "#b7c4ff",
+                        "surface-dim": "#121318",
+                        "on-secondary-fixed-variant": "#0038b6",
+                        "on-primary-fixed-variant": "#2c418b",
+                        "error": "#ffb4ab",
+                        "error-container": "#93000a",
+                        "surface-container-lowest": "#0d0e13",
+                        "inverse-on-surface": "#2f3035",
+                        "outline": "#8f909c",
+                        "on-surface": "#e3e1e9",
+                        "primary-fixed-dim": "#b7c4ff",
+                        "on-primary": "#102974",
+                        "on-secondary-container": "#dadfff",
+                        "surface-container-low": "#1a1b20",
+                        "on-background": "#e3e1e9",
+                        "on-surface-variant": "#c5c5d3",
+                        "surface-container-high": "#292a2f",
+                        "primary-container": "#001e6a",
+                        "surface-variant": "#34343a",
+                        "inverse-primary": "#455aa5",
+                        "on-tertiary-container": "#d57258",
+                        "on-primary-container": "#7589d8"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-mobile": "20px",
+                        "unit-sm": "8px",
+                        "unit-xxl": "96px",
+                        "margin-desktop": "64px",
+                        "unit-xs": "4px",
+                        "unit-lg": "24px",
+                        "unit-xl": "48px",
+                        "unit-md": "16px",
+                        "container-max": "1280px",
+                        "gutter": "32px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Inter"],
+                        "display-lg-mobile": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "headline-xl": ["Inter"],
+                        "caption": ["Inter"],
+                        "label-md": ["Inter"],
+                        "display-lg": ["Inter"],
+                        "body-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "display-lg-mobile": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "headline-lg": ["28px", {"lineHeight": "1.3", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "headline-xl": ["36px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "caption": ["12px", {"lineHeight": "1.4", "fontWeight": "400"}],
+                        "label-md": ["14px", {"lineHeight": "1.0", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { background-color: #030712; }
+        .grid-bg {
+            background-image: linear-gradient(to right, rgba(255,255,255,0.02) 1px, transparent 1px),
+                              linear-gradient(to bottom, rgba(255,255,255,0.02) 1px, transparent 1px);
+            background-size: 64px 64px;
+        }
+        .radial-overlay {
+            background: radial-gradient(circle at center, rgba(21, 87, 255, 0.05) 0%, transparent 70%);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-lg min-h-screen relative overflow-x-hidden">
+<div class="fixed inset-0 grid-bg pointer-events-none z-[-1]"></div>
+<!-- TopNavBar -->
+<nav class="sticky top-0 w-full bg-background/90 backdrop-blur-md border-b border-outline-variant z-50">
+<div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto h-24">
+<div class="font-headline-xl text-headline-xl font-bold tracking-tight">Helios Development</div>
+<div class="hidden md:flex gap-unit-lg items-center">
+<a class="font-label-md text-label-md text-primary border-b-2 border-primary pb-1" href="#">Institucional</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Soluções</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Tecnologia</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Sustentabilidade</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Projetos</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Conteúdos</a>
+</div>
+<button class="bg-[#1557FF] text-[#F5F7FA] font-label-md text-label-md px-unit-lg py-unit-sm rounded hover:bg-blue-600 transition-colors duration-200 hidden md:block">Contato</button>
+</div>
+</nav>
+<!-- Hero -->
+<section class="relative pt-unit-xxl pb-unit-xxl px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto min-h-[80vh] flex flex-col justify-center radial-overlay">
+<div class="max-w-3xl mb-unit-xl z-10">
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg mb-unit-lg leading-tight">Tecnologia que transforma ideias em soluções.</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-unit-xl max-w-2xl">Desenvolvemos sistemas corporativos, produtos digitais e plataformas escaláveis. Engenharia de software voltada para o impacto real e duradouro no seu negócio.</p>
+<div class="flex flex-wrap gap-unit-md">
+<button class="bg-[#1557FF] text-[#F5F7FA] font-label-md text-label-md px-unit-xl py-unit-md rounded hover:bg-blue-600 transition-colors duration-200">Conheça a Helios</button>
+<button class="bg-transparent text-primary font-label-md text-label-md px-unit-xl py-unit-md rounded border border-[#3D7CFF] hover:bg-[#3D7CFF]/10 transition-colors duration-200">Nossas soluções</button>
+</div>
+</div>
+<div class="absolute right-0 top-1/4 w-1/2 h-1/2 opacity-20 pointer-events-none hidden md:block">
+<!-- Simulated mathematical geometry / orbit -->
+<svg class="w-full h-full animate-[spin_60s_linear_infinite]" viewbox="0 0 100 100">
+<circle cx="50" cy="50" fill="none" r="40" stroke="currentColor" stroke-dasharray="2 4" stroke-width="0.5"></circle>
+<circle cx="50" cy="50" fill="none" r="30" stroke="currentColor" stroke-width="0.2"></circle>
+<circle cx="50" cy="50" fill="none" r="20" stroke="currentColor" stroke-dasharray="1 6" stroke-width="0.5"></circle>
+</svg>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest border-t border-outline-variant mt-unit-xxl">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter w-full px-margin-mobile md:px-margin-desktop py-unit-xxl max-w-container-max mx-auto">
+<div class="md:col-span-4 mb-unit-lg md:mb-0">
+<div class="font-headline-lg text-headline-lg font-bold text-on-surface mb-unit-md">Helios Development</div>
+<p class="font-body-md text-body-md text-on-surface-variant">© 2024 Helios Development. Todos os direitos reservados.</p>
+</div>
+<div class="md:col-span-8 flex flex-wrap gap-unit-xl justify-start md:justify-end">
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Institucional</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Soluções</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Tecnologia</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Social</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Privacidade</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Termos</a>
+</div>
+</div>
+</footer>
+</body></html>

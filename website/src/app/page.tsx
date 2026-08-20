@@ -72,7 +72,6 @@ export default function HomePage() {
                 <Link
                   href={item.href}
                   className="group flex h-full flex-col border border-card-border bg-card-bg p-6 transition-all duration-300 hover:-translate-y-1 hover:border-action-hover/30"
-                  data-cursor="VIEW"
                 >
                   <span className="material-symbols-outlined mb-4 text-[32px] text-primary">{item.icon}</span>
                   <h3 className="mb-2 text-[28px] font-semibold text-on-surface group-hover:text-primary">{item.title}</h3>

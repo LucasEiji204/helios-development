@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
-import { NAV_LINKS, SITE } from "@/lib/constants";
+import { NAV_LINKS } from "@/lib/constants";
 import { Button } from "@/components/ui/Button";
 import { Logo } from "@/components/ui/Logo";
 import { cn } from "@/lib/utils";
@@ -15,7 +15,15 @@ export function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 20);
+    const onScroll = () => {
+      const y = window.scrollY;
+      setScrolled((prev) => {
+        // Hysteresis: evita oscilação do estado perto do topo (scroll bounce)
+        if (prev && y < 10) return false;
+        if (!prev && y > 30) return true;
+        return prev;
+      });
+    };
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
@@ -38,16 +46,10 @@ export function Navbar() {
 
   return (
     <>
-      <motion.nav
-        initial={false}
-        animate={{
-          height: scrolled ? 72 : 96,
-          backgroundColor: scrolled ? "rgba(18, 19, 24, 0.92)" : "rgba(18, 19, 24, 0.9)",
-        }}
-        transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
+      <nav
         className={cn(
-          "sticky top-0 z-50 w-full border-b backdrop-blur-md",
-          scrolled ? "border-outline-variant shadow-[0_1px_0_rgba(183,196,255,0.05)]" : "border-outline-variant"
+          "sticky top-0 z-50 w-full border-b backdrop-blur-md transition-[height,background-color,box-shadow,border-color] duration-300 ease-[cubic-bezier(0.16,1,0.3,1)]",
+          scrolled ? "h-[72px] border-outline-variant bg-[rgba(18,19,24,0.92)] shadow-[0_1px_0_rgba(183,196,255,0.05)]" : "h-[96px] border-outline-variant bg-[rgba(18,19,24,0.9)]"
         )}
       >
         <div className="mx-auto flex h-full max-w-[1280px] items-center justify-between px-[20px] md:px-[64px]">
@@ -86,7 +88,7 @@ export function Navbar() {
             </button>
           </div>
         </div>
-      </motion.nav>
+      </nav>
 
       <AnimatePresence>
         {mobileOpen && (

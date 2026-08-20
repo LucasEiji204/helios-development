@@ -75,7 +75,7 @@ export function Button({
 
   if (href && !disabled) {
     return (
-      <Link href={href} className={classes} data-cursor="OPEN">
+      <Link href={href} className={classes}>
         {content}
       </Link>
     );
@@ -87,7 +87,6 @@ export function Button({
       className={classes}
       disabled={disabled || loading}
       onClick={onClick}
-      data-cursor={variant === "primary" ? "OPEN" : undefined}
     >
       {content}
     </button>

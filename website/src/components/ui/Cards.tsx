@@ -19,7 +19,6 @@ export function ServiceCard({ service, index = 0 }: ServiceCardProps) {
       viewport={{ once: true, margin: "-40px" }}
       transition={{ duration: 0.6, delay: index * 0.1, ease: [0.16, 1, 0.3, 1] }}
       className="group relative flex h-full flex-col overflow-hidden rounded-lg border border-card-border bg-card-bg p-6 transition-colors duration-300 hover:bg-[#0A1A35]"
-      data-cursor="VIEW"
     >
       <div className="absolute left-0 top-0 h-[2px] w-full bg-gradient-to-r from-transparent via-action to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
       <div className="mb-4 flex h-12 w-12 items-center justify-center rounded border border-outline-variant bg-surface-container">
@@ -101,7 +100,6 @@ export function ProjectCard({ slug, title, excerpt, image, category, index = 0 }
       transition={{ duration: 0.6, delay: index * 0.08 }}
       layout
       className="group"
-      data-cursor="VIEW"
     >
       <Link href={`/projetos/${slug}`} className="block">
         <div className="relative mb-4 aspect-[16/10] overflow-hidden rounded-lg border border-card-border">
@@ -157,7 +155,6 @@ export function ArticleCard({ slug, title, excerpt, image, category, date, index
             fill
             className="object-cover transition-transform duration-700 group-hover:scale-105"
             sizes="(max-width: 768px) 100vw, 33vw"
-            data-cursor="EXPLORE"
           />
           <span className="absolute left-4 top-4 rounded bg-surface-container/90 px-3 py-1 text-[12px] font-semibold uppercase tracking-[0.05em] text-primary backdrop-blur-sm">
             {category}
@@ -197,7 +194,6 @@ export function ImageReveal({ src, alt, className }: ImageRevealProps) {
       viewport={{ once: true }}
       transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
       className={cn("relative overflow-hidden border border-outline-variant", className)}
-      data-cursor="EXPLORE"
     >
       <Image src={src} alt={alt} fill className="object-cover" sizes="(max-width: 768px) 100vw, 50vw" />
     </motion.div>

@@ -126,7 +126,7 @@ export default async function ProjectDetailPage({ params }: Props) {
       <Section>
         <div className="flex flex-col justify-between gap-6 border-t border-outline-variant pt-8 md:flex-row">
           {prev ? (
-            <Link href={`/projetos/${prev.slug}`} className="group flex flex-col gap-2" data-cursor="VIEW">
+            <Link href={`/projetos/${prev.slug}`} className="group flex flex-col gap-2">
               <span className="text-[14px] font-semibold uppercase tracking-[0.05em] text-on-surface-variant">
                 ← Projeto anterior
               </span>
@@ -138,7 +138,7 @@ export default async function ProjectDetailPage({ params }: Props) {
             <div />
           )}
           {next ? (
-            <Link href={`/projetos/${next.slug}`} className="group flex flex-col gap-2 text-right md:items-end" data-cursor="VIEW">
+            <Link href={`/projetos/${next.slug}`} className="group flex flex-col gap-2 text-right md:items-end">
               <span className="text-[14px] font-semibold uppercase tracking-[0.05em] text-on-surface-variant">
                 Próximo projeto →
               </span>

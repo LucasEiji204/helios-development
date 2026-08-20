@@ -36,7 +36,6 @@ export default function CarreirasPage() {
               <Link
                 href={`/carreiras/${job.slug}`}
                 className="group block border border-card-border bg-card-bg p-6 transition-all duration-300 hover:-translate-y-1 hover:border-action-hover/30"
-                data-cursor="VIEW"
               >
                 <div className="mb-2 flex flex-wrap items-center gap-3">
                   <h2 className="text-[28px] font-semibold text-on-surface transition-colors group-hover:text-primary">

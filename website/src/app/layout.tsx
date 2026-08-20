@@ -3,6 +3,7 @@ import { Inter, Rajdhani, Exo_2 } from "next/font/google";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { CustomCursor } from "@/components/layout/CustomCursor";
+import { ScrollProgress } from "@/components/layout/ScrollProgress";
 import { GridBackground } from "@/components/layout/Backgrounds";
 import { SITE } from "@/lib/constants";
 import { createMetadata } from "@/lib/metadata";
@@ -39,6 +40,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       <body className="flex min-h-full flex-col bg-base-dark font-sans text-on-background antialiased">
         <GridBackground />
         <CustomCursor />
+        <ScrollProgress />
         <Navbar />
         <main className="relative z-10 flex-grow">{children}</main>
         <Footer />

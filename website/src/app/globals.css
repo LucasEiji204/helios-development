@@ -95,11 +95,9 @@ body {
 }
 
 .radial-overlay {
-  background: radial-gradient(
-    circle at center,
-    rgba(21, 87, 255, 0.05) 0%,
-    transparent 70%
-  );
+  background: radial-gradient(circle at center,
+      rgba(21, 87, 255, 0.05) 0%,
+      transparent 70%);
 }
 
 .animated-underline {
@@ -127,4 +125,31 @@ body {
 body.custom-cursor-active,
 body.custom-cursor-active * {
   cursor: none !important;
+}
+
+@keyframes gradient-shift {
+
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.animated-gradient {
+  background: linear-gradient(120deg, #030712, #0a1a35, #030712);
+  background-size: 200% 200%;
+  animation: gradient-shift 15s ease infinite;
+}
+
+.text-gradient-animated {
+  background: linear-gradient(90deg, #b7c4ff, #3d7cff, #b7c4ff);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: gradient-shift 6s linear infinite;
 }

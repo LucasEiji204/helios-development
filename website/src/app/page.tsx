@@ -2,7 +2,8 @@
 
 import { Button } from "@/components/ui/Button";
 import { SlideUp, FadeIn } from "@/components/animations/motion";
-import { MouseParallaxLayer } from "@/components/animations/Parallax";
+import { AnimatedHeroImage } from "@/components/animations/AnimatedHeroImage";
+import { TiltCard } from "@/components/animations/TiltCard";
 import { RadialGradient } from "@/components/layout/Backgrounds";
 import { Container } from "@/components/ui/Container";
 import { SITE } from "@/lib/constants";
@@ -11,28 +12,16 @@ import { ProjectCard } from "@/components/ui/Cards";
 import { projects } from "@/data/projects";
 import { SectionHeader } from "@/components/ui/Container";
 
-function OrbitGeometry() {
-  return (
-    <MouseParallaxLayer depth={8} className="absolute right-0 top-1/4 hidden h-1/2 w-1/2 opacity-20 md:block">
-      <svg className="h-full w-full animate-[spin_60s_linear_infinite]" viewBox="0 0 100 100">
-        <circle cx="50" cy="50" r="40" fill="none" stroke="currentColor" strokeWidth="0.5" strokeDasharray="2 4" />
-        <circle cx="50" cy="50" r="30" fill="none" stroke="currentColor" strokeWidth="0.2" />
-        <circle cx="50" cy="50" r="20" fill="none" stroke="currentColor" strokeWidth="0.5" strokeDasharray="1 6" />
-      </svg>
-    </MouseParallaxLayer>
-  );
-}
-
 export default function HomePage() {
   return (
     <>
       <RadialGradient />
       {/* Hero */}
       <section className="relative flex min-h-[80vh] flex-col justify-center radial-overlay">
-        <Container className="relative z-10 py-[96px]">
+        <Container className="relative z-10 flex items-center justify-between gap-12 py-[96px]">
           <div className="max-w-3xl">
             <SlideUp>
-              <h1 className="mb-6 text-[40px] font-bold leading-[1.2] tracking-[-0.02em] md:text-[64px] md:leading-[1.1]">
+              <h1 className="text-gradient-animated mb-6 text-[40px] font-bold leading-[1.2] tracking-[-0.02em] md:text-[64px] md:leading-[1.1]">
                 {SITE.tagline}
               </h1>
             </SlideUp>
@@ -50,7 +39,7 @@ export default function HomePage() {
               </Button>
             </FadeIn>
           </div>
-          <OrbitGeometry />
+          <AnimatedHeroImage />
         </Container>
       </section>
 
@@ -69,17 +58,19 @@ export default function HomePage() {
               { title: "Tech Consulting", desc: "Arquitetura e transformação digital.", href: "/solucoes/consultoria", icon: "architecture" },
             ].map((item, i) => (
               <SlideUp key={item.title}>
-                <Link
-                  href={item.href}
-                  className="group flex h-full flex-col border border-card-border bg-card-bg p-6 transition-all duration-300 hover:-translate-y-1 hover:border-action-hover/30"
-                >
-                  <span className="material-symbols-outlined mb-4 text-[32px] text-primary">{item.icon}</span>
-                  <h3 className="mb-2 text-[28px] font-semibold text-on-surface group-hover:text-primary">{item.title}</h3>
-                  <p className="mb-4 flex-grow text-[16px] text-on-surface-variant">{item.desc}</p>
-                  <span className="inline-flex items-center gap-2 text-[14px] font-semibold uppercase tracking-[0.05em] text-primary transition-all group-hover:gap-3">
-                    Saber mais <span className="material-symbols-outlined text-[18px]">arrow_forward</span>
-                  </span>
-                </Link>
+                <TiltCard className="h-full">
+                  <Link
+                    href={item.href}
+                    className="group flex h-full flex-col border border-card-border bg-card-bg p-6 transition-all duration-500 hover:border-primary/40 hover:shadow-[0_8px_40px_rgba(21,87,255,0.08)]"
+                  >
+                    <span className="material-symbols-outlined mb-4 text-[32px] text-primary">{item.icon}</span>
+                    <h3 className="mb-2 text-[28px] font-semibold text-on-surface group-hover:text-primary">{item.title}</h3>
+                    <p className="mb-4 flex-grow text-[16px] text-on-surface-variant">{item.desc}</p>
+                    <span className="inline-flex items-center gap-2 text-[14px] font-semibold uppercase tracking-[0.05em] text-primary transition-all group-hover:gap-3">
+                      Saber mais <span className="material-symbols-outlined text-[18px]">arrow_forward</span>
+                    </span>
+                  </Link>
+                </TiltCard>
               </SlideUp>
             ))}
           </div>
@@ -101,7 +92,9 @@ export default function HomePage() {
           </div>
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
             {projects.slice(0, 2).map((project, i) => (
-              <ProjectCard key={project.slug} {...project} index={i} />
+              <TiltCard key={project.slug} className="h-full">
+                <ProjectCard {...project} index={i} />
+              </TiltCard>
             ))}
           </div>
         </Container>

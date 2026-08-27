@@ -22,17 +22,17 @@ type ButtonProps = {
 
 const variants: Record<ButtonVariant, string> = {
   primary:
-    "bg-action text-action-text hover:bg-action-hover focus-visible:ring-2 focus-visible:ring-action-hover focus-visible:ring-offset-2 focus-visible:ring-offset-base-dark",
+    "bg-slate-100 text-slate-950 font-semibold hover:bg-white shadow-lg shadow-black/30 hover:shadow-xl hover:shadow-black/40 focus-visible:ring-2 focus-visible:ring-white active:scale-[0.98]",
   secondary:
-    "bg-transparent text-primary border border-action-hover hover:bg-action-hover/10 focus-visible:ring-2 focus-visible:ring-action-hover",
+    "bg-[#171922] text-slate-200 border border-white/10 hover:border-white/20 hover:bg-[#1f222e] hover:text-white focus-visible:ring-2 focus-visible:ring-slate-400 active:scale-[0.98]",
   ghost:
-    "bg-transparent text-primary hover:bg-surface-container-low focus-visible:ring-2 focus-visible:ring-primary",
+    "bg-transparent text-slate-300 hover:text-white hover:bg-white/[0.05] focus-visible:ring-2 focus-visible:ring-slate-400",
 };
 
 const sizes: Record<ButtonSize, string> = {
-  sm: "px-4 py-2 text-[14px]",
-  md: "px-6 py-3 text-[14px]",
-  lg: "px-12 py-4 text-[14px]",
+  sm: "px-4 py-2 text-[13px] rounded-full",
+  md: "px-6 py-2.5 text-[14px] rounded-full",
+  lg: "px-8 py-3.5 text-[15px] rounded-full",
 };
 
 export function Button({

@@ -5,18 +5,18 @@ import { Logo } from "@/components/ui/Logo";
 
 export function Footer() {
   return (
-    <footer className="mt-auto border-t border-outline-variant bg-surface-container-lowest">
-      <Container className="grid grid-cols-1 gap-8 py-[96px] md:grid-cols-12">
-        <div className="md:col-span-4">
+    <footer className="mt-auto border-t border-white/8 bg-[#090a0d] relative z-10">
+      <Container className="grid grid-cols-1 gap-8 py-[72px] md:grid-cols-12">
+        <div className="md:col-span-5">
           <Logo size="lg" className="mb-4" />
-          <p className="text-[16px] leading-[1.6] text-on-surface-variant">{SITE.copyright}</p>
+          <p className="text-[14px] leading-relaxed text-slate-400">{SITE.copyright}</p>
         </div>
-        <div className="flex flex-wrap gap-8 md:col-span-8 md:justify-end">
+        <div className="flex flex-wrap items-center gap-6 md:col-span-7 md:justify-end">
           {FOOTER_LINKS.map((link) => (
             <Link
               key={link.href}
               href={link.href}
-              className="font-brand text-[15px] font-bold uppercase tracking-[0.08em] text-on-surface-variant transition-colors duration-200 hover:text-primary"
+              className="text-[13px] font-medium text-slate-400 transition-colors duration-200 hover:text-white"
             >
               {link.label}
             </Link>
@@ -26,3 +26,5 @@ export function Footer() {
     </footer>
   );
 }
+
+

@@ -12,9 +12,15 @@
   <img src="https://img.shields.io/badge/Framer_Motion-0055FF?style=for-the-badge&logo=framer&logoColor=white" alt="Framer Motion">
 </p>
 
+<p align="center">
+  <a href="https://helios-development-six.vercel.app"><img src="https://img.shields.io/badge/🌐_Acessar_o_site-000000?style=for-the-badge&logo=vercel&logoColor=white" alt="Acessar o site"></a>
+</p>
+
 ---
 
 ## 🖼️ Demonstração
+
+🔗 **Site no ar:** [helios-development-six.vercel.app](https://helios-development-six.vercel.app)
 
 <p align="center">
   <img src="helios_development_home/screen.png" alt="Página inicial da Helios Development" width="800">
@@ -38,6 +44,7 @@
 | TypeScript | Tipagem do código |
 | Tailwind CSS | Estilização e responsividade |
 | Framer Motion | Animações e transições |
+| Vercel | Hospedagem e deploy contínuo |
 
 ## 📁 Estrutura do repositório
 
